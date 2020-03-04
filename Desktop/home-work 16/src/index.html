@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hillel home work16</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 48px auto 0;
+        }
+
+        .note__item:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        .note__item--completed {
+            text-decoration: line-through;
+            color: grey;
+        }
+        
+    </style>
+    <div class="box">
+        <form class="form">
+            <input type="text" placeholder="title" required name="value" name="title" class="form_input">
+             <input type="text" placeholder="text" required name="text" name="text" class="form_input"> 
+            <button type="submit" class="form_button">add</button>
+        </form>
+        <ul class="note"></ul>
+       <!-- <li data-id="${note.id}" class="note__item${note.completed ? ' note__item--completed' : ''}">
+            <span class="note__text">${note.value}</span>
+            <button class="note__button note__button-done"${note.completed && 'disabled'}>DONE</button>
+            <button class="note__button note__button--remove">Remove</button>
+        </li> -->
+    </div>
+    <form class="edit"></form>
+   
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
